@@ -1,0 +1,76 @@
+{
+    "values": [
+        {
+            "data": "07/01/2023",
+            "hora": "13:02:57",
+            "origem": "5581999999999",
+            "destino": "5581888888888",
+            "situacao": "Atendida",
+            "duracao": "00:00:04",
+            "protocolo": "1673107377.43099"
+        },
+        {
+            "data": "06/01/2023",
+            "hora": "15:02:57",
+            "origem": "5581999899988",
+            "destino": "5581888878899",
+            "situacao": "Não atendida",
+            "duracao": "00:00:35",
+            "protocolo": "1673103214.42972"
+        },
+        {
+            "data": "06/01/2023",
+            "hora": "13:02:57",
+            "origem": "5581999999999",
+            "destino": "5581888888888",
+            "situacao": "Atendida",
+            "duracao": "00:00:04",
+            "protocolo": "1673107377.43099"
+        },
+        {
+            "data": "05/01/2023",
+            "hora": "15:02:57",
+            "origem": "5581999999988",
+            "destino": "5581888888899",
+            "situacao": "Não atendida",
+            "duracao": "00:00:35",
+            "protocolo": "1673103214.42972"
+        },
+        {
+            "data": "05/01/2023",
+            "hora": "13:02:57",
+            "origem": "5581999999999",
+            "destino": "5581888888888",
+            "situacao": "Atendida",
+            "duracao": "00:00:04",
+            "protocolo": "1673107377.43099"
+        },
+        {
+            "data": "05/01/2023",
+            "hora": "15:02:57",
+            "origem": "5581999899988",
+            "destino": "5581888878899",
+            "situacao": "Não atendida",
+            "duracao": "00:00:35",
+            "protocolo": "1673103214.42972"
+        },
+        {
+            "data": "05/01/2023",
+            "hora": "13:02:57",
+            "origem": "5581999999999",
+            "destino": "5581888888888",
+            "situacao": "Atendida",
+            "duracao": "00:00:04",
+            "protocolo": "1673107377.43099"
+        },
+        {
+            "data": "05/01/2023",
+            "hora": "15:02:57",
+            "origem": "5581999999988",
+            "destino": "5581888888899",
+            "situacao": "Não atendida",
+            "duracao": "00:00:35",
+            "protocolo": "1673103214.42972"
+        }
+    ]
+}
