@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { delay } from 'rxjs';
 import { Relatorio } from 'src/app/model/relatorio';
 
 @Injectable({
@@ -12,6 +13,9 @@ export class RelatorioService {
   constructor(private httpClient: HttpClient) { }
 
   getRelatorio() {
-    return this.httpClient.get<Relatorio[]>(this.API);
+    return this.httpClient.get<Relatorio[]>(this.API).pipe(
+      delay(2000),
+      //  first() se inscreve no observable e assim que receber a primeira resposta se desincreve do observable
+    );
   }
 }
