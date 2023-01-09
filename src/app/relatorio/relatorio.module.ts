@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { RelatorioRoutingModule } from './relatorio-routing.module';
 import { RelatorioComponent } from './relatorio/relatorio.component';
 import { AppMaterialModule } from '../shared/app-material/app-material.module';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { AppMaterialModule } from '../shared/app-material/app-material.module';
   imports: [
     CommonModule,
     RelatorioRoutingModule,
-    AppMaterialModule
+    AppMaterialModule,
+    SharedModule
   ]
 })
 export class RelatorioModule { }

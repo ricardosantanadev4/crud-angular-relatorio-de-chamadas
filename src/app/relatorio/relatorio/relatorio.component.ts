@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
-import { Observable } from 'rxjs';
+import { MatDialog } from '@angular/material/dialog';
+import { catchError, Observable, of } from 'rxjs';
 import { Relatorio } from 'src/app/model/relatorio';
+import { ErroDialogComponent } from 'src/app/shared/components/erro-dialog/erro-dialog.component';
 import { RelatorioService } from '../services/relatorio.service';
 
 @Component({
@@ -13,7 +15,20 @@ export class RelatorioComponent {
   dataSource$: Observable<Relatorio[]>;
   displayedColumns = ['data', 'hora', 'origem', 'destino', 'situacao', 'duracao', 'protocolo'];
 
-  constructor(private relatorioService: RelatorioService) {
-    this.dataSource$ = this.relatorioService.getRelatorio();
+  constructor(private relatorioService: RelatorioService, public dialog: MatDialog) {
+    this.dataSource$ = this.relatorioService.getRelatorio().pipe(
+      catchError(error => {
+        console.log(error)
+        this.openDialog('Erro ao carregar recursos.')
+        return of([])
+      })
+    );
   }
+
+  openDialog(errorMsg: string) {
+    this.dialog.open(ErroDialogComponent, {
+      data: errorMsg,
+    });
+  }
+
 }
