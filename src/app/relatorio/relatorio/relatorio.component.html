@@ -39,7 +39,20 @@
                 <!-- Situacao Column -->
                 <ng-container matColumnDef="situacao">
                     <th mat-header-cell *matHeaderCellDef> Situação </th>
-                    <td mat-cell *matCellDef="let element"> {{element.situacao}} </td>
+                    <td mat-cell *matCellDef="let element"> {{element.situacao}}
+                        <div *ngIf="element.situacao == 'Não atendida'; else elseBlock">
+                            <mat-icon aria-hidden="false" aria-label="a'Situacao da chamada" class="callReceived">{{
+                                element.situacao |
+                                situacao}}
+                            </mat-icon>
+                        </div>
+                        <ng-template #elseBlock>
+                            <mat-icon aria-hidden="false" aria-label="a'Situacao da chamada" class="callMissed">{{
+                                element.situacao |
+                                situacao}}
+                            </mat-icon>
+                        </ng-template>
+                    </td>
                 </ng-container>
                 \
                 <!-- Duracao Column -->
@@ -62,7 +75,7 @@
             <div class="loadingSppiner">
                 <mat-spinner></mat-spinner>
             </div>
-            
+
         </ng-template>
     </mat-card-content>
 </mat-card>
