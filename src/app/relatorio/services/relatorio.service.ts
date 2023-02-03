@@ -8,8 +8,8 @@ import { Relatorio } from 'src/app/model/relatorio';
 })
 export class RelatorioService {
   // relatorio: Relatorio[] = [{ data: '07/01/2023', hora: '13:02:57', origem: '5581999999999', destino: '5581888888888', situacao: 'Atendida', duracao: '00:00:04', protocolo: '1673107377.43099' }];
-  private readonly API = 'http://localhost:3000/values';
-
+  // private readonly API = 'http://localhost:3000/values';
+  private readonly API = '/api/relatorio';
   constructor(private httpClient: HttpClient) { }
 
   getRelatorio() {
